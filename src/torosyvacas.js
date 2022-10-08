@@ -2,6 +2,9 @@
 class TorosYVacas{
      
     setClave(inclave) {
+        if(inclave.length==0){
+            return "NECESITA INGRESAR UNA CLAVE"; 
+        } 
         if(isNaN(parseInt(inclave))){
             return "INGRESE SOLO NUMEROS";  
         }
@@ -9,7 +12,6 @@ class TorosYVacas{
             return "INGRESE CLAVE DE 4 DIGITOS"; 
         }
         return "ok";
-        //this.clave= inclave;
     }
     getClave() {
         return this.clave;
