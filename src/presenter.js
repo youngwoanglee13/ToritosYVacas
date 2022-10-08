@@ -1,18 +1,20 @@
-//import ejecutarComando from "./torosyvacas.js";
-
+//import TorosYVacas from "./TorosYVacas";
 //const comando = document.querySelector("#idcomandos");
-
+const codigo =document.getElementById("idcodigo");
 //const cD = new ejecutarComando();
 //const form = document.querySelector("#simulador-form");
 //const div = document.querySelector("#resultado-div");
-const iniForm = document.querySelector("#inicio-form");
-const juegoForm = document.querySelector("#inicio-form");
+const inicioForm = document.querySelector("#inicio-form");
 
 
-iniForm.addEventListener("submit", (event) => {
+inicioForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  
-  //iniForm.innerHTML = "";
+ // window.alert(codigo.value);
+  if(isNaN(parseInt(codigo.value))){
+    window.alert("INGRESE SOLO NUMEROS");
+    
+  }
+  //inicioForm.innerHTML = "";
 });
 
 //<input type="text" id="idintento" />
