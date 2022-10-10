@@ -1,6 +1,5 @@
 
 class TorosYVacas{
-     
     setClave(inclave) {
         if(inclave.length==0){
             return "NECESITA INGRESAR UNA CLAVE"; 
@@ -17,7 +16,10 @@ class TorosYVacas{
         return this.clave;
     }
     intentar(intento){
-        return "";
+        if(isNaN(parseInt(intento))){
+            return "INGRESE SOLO NUMEROS";  
+        }
+        return "ok";
     }
 }
 export default TorosYVacas;

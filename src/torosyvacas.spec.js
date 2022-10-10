@@ -13,6 +13,9 @@ describe("INGRESAR CODIGO", () => {
     it("ingresar clave vacia", () => {
         expect(toro.setClave("")).toEqual("NECESITA INGRESAR UNA CLAVE");
     });
-      
+    it("ingresar intento solo numeros", () => {
+        expect(toro.intentar("intentar")).toEqual("INGRESE SOLO NUMEROS");
+    });
+    
 
   });
