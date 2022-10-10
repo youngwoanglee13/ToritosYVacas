@@ -20,7 +20,7 @@ intentarForm.addEventListener("submit", (event) => {
 
   if(toro.intentar(intento.value)=="GANASTE"){
     document.getElementById("idintentar").disabled=true;
-    document.getElementById("idestado").innerHTML="<br>GANASTE 4 TOROS";
+    document.getElementById("idestado").innerHTML="<br>Respuesta: GANASTE 4 TOROS";
   }else{
     window.alert(toro.intentar(intento.value));
   }i
