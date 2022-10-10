@@ -17,7 +17,13 @@ describe("INGRESAR CODIGO", () => {
         expect(toro.intentar("intentar")).toEqual("INGRESE SOLO NUMEROS");
     });
     it("ingresar intento con longitud diferente a 4 digitos", () => {
-        expect(toro.intentar("12345")).toEqual("NGRESE INTENTO DE 4 DIGITOS");
+        expect(toro.intentar("12345")).toEqual("INGRESE INTENTO DE 4 DIGITOS");
+    });
+    it("ingresar intento vacio", () => {
+        expect(toro.intentar("")).toEqual("NECESITA INGRESAR UN INTENTO");
+    });
+    it("ingresar intento igual a la clave secreta", () => {
+        expect(toro.intentar("1234")).toEqual("GANASTE");
     });
 
   });

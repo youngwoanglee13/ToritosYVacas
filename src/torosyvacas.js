@@ -10,6 +10,7 @@ class TorosYVacas{
         if(inclave.length!=4){
             return "INGRESE CLAVE DE 4 DIGITOS"; 
         }
+        this.clave=inclave;
         return "ok";
     }
     intentar(intento){
@@ -21,6 +22,9 @@ class TorosYVacas{
         }
         if(intento.length!=4){
             return "INGRESE INTENTO DE 4 DIGITOS"; 
+        }
+        if(parseInt(intento)==this.clave){
+            return "GANASTE"
         }
         return "ok";
     }
