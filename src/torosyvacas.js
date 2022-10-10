@@ -19,6 +19,9 @@ class TorosYVacas{
         if(isNaN(parseInt(intento))){
             return "INGRESE SOLO NUMEROS";  
         }
+        if(intento.length!=4){
+            return "INGRESE INTENTO DE 4 DIGITOS"; 
+        }
         return "ok";
     }
 }

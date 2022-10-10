@@ -16,6 +16,8 @@ describe("INGRESAR CODIGO", () => {
     it("ingresar intento solo numeros", () => {
         expect(toro.intentar("intentar")).toEqual("INGRESE SOLO NUMEROS");
     });
-    
+    it("ingresar intento con longitud diferente a 4 digitos", () => {
+        expect(toro.intentar("12345")).toEqual("NGRESE INTENTO DE 4 DIGITOS");
+    });
 
   });
