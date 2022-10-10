@@ -16,6 +16,9 @@ class TorosYVacas{
         return this.clave;
     }
     intentar(intento){
+        if(intento.length==0){
+            return "NECESITA INGRESAR UN INTENTO"; 
+        } 
         if(isNaN(parseInt(intento))){
             return "INGRESE SOLO NUMEROS";  
         }
