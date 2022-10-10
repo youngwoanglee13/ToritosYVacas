@@ -18,8 +18,9 @@ inicioForm.addEventListener("submit", (event) => {
 intentarForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  if(toro.intentar(intento.value)=="ok"){
-     
+  if(toro.intentar(intento.value)=="GANASTE"){
+    document.getElementById("idintentar").disabled=true;
+    document.getElementById("idestado").innerHTML="<br>GANASTE 4 TOROS";
   }else{
     window.alert(toro.intentar(intento.value));
   }i
