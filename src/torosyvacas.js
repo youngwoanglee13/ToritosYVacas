@@ -12,9 +12,6 @@ class TorosYVacas{
         }
         return "ok";
     }
-    getClave() {
-        return this.clave;
-    }
     intentar(intento){
         if(intento.length==0){
             return "NECESITA INGRESAR UN INTENTO"; 
