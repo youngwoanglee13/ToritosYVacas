@@ -16,7 +16,10 @@ class TorosYVacas{
         return this.clave;
     }
     intentar(intento){
-        return "";
+        if(isNaN(parseInt(intento))){
+            return "INGRESE SOLO NUMEROS";  
+        }
+        return "ok";
     }
 }
 export default TorosYVacas;
