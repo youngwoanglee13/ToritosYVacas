@@ -31,5 +31,8 @@ describe("INGRESAR CODIGO", () => {
     it("ingresar intento con vaca", () => {
         expect(toro.intentar("5512")).toEqual("**");
     });
+    it("ingresar intento con vaca", () => {
+        expect(toro.intentar("1235")).toEqual("!!!#");
+    });
 
   });
