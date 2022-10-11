@@ -1,5 +1,5 @@
 
-class torosyvacas{
+class TorosYVacas{
     setClave(inclave) {
         if(inclave.length==0){
             return "NECESITA INGRESAR UNA CLAVE"; 
@@ -33,12 +33,18 @@ class torosyvacas{
                         clave[i]="X";
                         res="!"+res;
                     }else{
-                        for(var j=0;j<intento.length;j++){
-                            if(intento[i]==clave[j]){
-                                clave[j]="X";
-                                res=res+"*";
+                        if(intento[i]==parseInt(clave[i])+1 || intento[i]==parseInt(clave[i])-1){
+                            res+="#";
+                        }else{
+                            for(var j=0;j<intento.length;j++){
+                                if(intento[i]==clave[j]){
+                                    clave[j]="X";
+                                    res=res+"*";
+                                }
                             }
-                        }
+
+                        }    
+                        
                     }
             }
             return res;
@@ -47,5 +53,5 @@ class torosyvacas{
         return "ok";
     }
 }
-export default torosyvacas;
+export default TorosYVacas;
 

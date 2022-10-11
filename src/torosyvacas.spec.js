@@ -1,5 +1,5 @@
-import torosyvacas from "./torosyvacas";
-const toro = new torosyvacas();
+import TorosYVacas from "./TorosYVacas";
+const toro = new TorosYVacas();
 describe("INGRESAR CODIGO", () => {
     it("ingresar clave", () => {
       expect(toro.setClave("1234")).toEqual("ok");
@@ -31,8 +31,8 @@ describe("INGRESAR CODIGO", () => {
     it("ingresar intento con vaca", () => {
         expect(toro.intentar("5512")).toEqual("**");
     });
-    it("ingresar intento con vaca y toro", () => {
-        expect(toro.intentar("1312")).toEqual("!**");
+    it("ingresar intento con ternera", () => {
+        expect(toro.intentar("5555")).toEqual("#");
     });
 
   });
