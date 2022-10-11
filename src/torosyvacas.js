@@ -33,17 +33,14 @@ class TorosYVacas{
                         clave[i]="X";
                         res="!"+res;
                     }else{
-                        for(var j=0;j<intento.length;j++){
-                            if(intento[i]==clave[j]){
-                                clave[j]="X";
-                                res=res+"*";
-                            }
-                            if(intento[i]==clave[j=i-1]||intento[i]==clave[j=i+1]){
-                                clave[j]="X";
-                                res=res+"#";
-                            }
-                        }
-                    }
+                        if(intento[i]==parseInt(clave[i])-1 || intento[i]==parseInt(clave[i])+1){
+                            res+="#";
+                        }else{
+                            for(var j=0;j<intento.length;j++){
+                                if(intento[i]==clave[j]){
+                                    clave[j]="X";
+                                    res=res+"*";
+                                }
             }
             return res;
         }
