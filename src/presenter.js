@@ -1,5 +1,5 @@
-import TorosYVacas from "./TorosYVacas.js";
-const toro = new TorosYVacas();
+import torosyvacas from "./torosyvacas.js";
+const toro = new torosyvacas();
 const codigo =document.getElementById("idcodigo");
 const intento =document.getElementById("idintento");
 const inicioForm = document.querySelector("#inicio-form");

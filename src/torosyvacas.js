@@ -1,5 +1,5 @@
 
-class TorosYVacas{
+class torosyvacas{
     setClave(inclave) {
         if(inclave.length==0){
             return "NECESITA INGRESAR UNA CLAVE"; 
@@ -47,5 +47,5 @@ class TorosYVacas{
         return "ok";
     }
 }
-export default TorosYVacas;
+export default torosyvacas;
 

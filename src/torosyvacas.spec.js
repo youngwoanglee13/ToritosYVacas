@@ -1,5 +1,5 @@
-import TorosYVacas from "./TorosYVacas";
-const toro = new TorosYVacas();
+import torosyvacas from "./torosyvacas";
+const toro = new torosyvacas();
 describe("INGRESAR CODIGO", () => {
     it("ingresar clave", () => {
       expect(toro.setClave("1234")).toEqual("ok");
