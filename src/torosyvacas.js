@@ -1,5 +1,5 @@
 
-class TorosYVacas{
+class torosyvacas{
     constructor(){
         
     }
@@ -50,5 +50,5 @@ class TorosYVacas{
         return "ok";
     }
 }
-export default TorosYVacas;
+export default torosyvacas;
 

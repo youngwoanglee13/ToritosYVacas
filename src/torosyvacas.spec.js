@@ -1,4 +1,4 @@
-import TorosYVacas from "./TorosYVacas";
+import torosyvacas from "./torosyvacas";
 const toro = new TorosYVacas();
 describe("INGRESAR CODIGO", () => {
     it("ingresar clave", () => {
