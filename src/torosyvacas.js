@@ -10,8 +10,14 @@ class TorosYVacas{
         if(inclave.length!=4){
             return "INGRESE CLAVE DE 4 DIGITOS"; 
         }
+        var res="";
+        for(var i=0; i<inclave.length; i++){
+            if(parseInt(inclave[i])%2!=0){
+                res+="%";
+            }
+        }
         this.clave=inclave;
-        return "ok";
+        return res;
     }
     intentar(intento){
         if(intento.length==0){

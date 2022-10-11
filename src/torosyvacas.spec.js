@@ -34,5 +34,7 @@ describe("INGRESAR CODIGO", () => {
     it("ingresar intento con ternera", () => {
         expect(toro.intentar("5555")).toEqual("#");
     });
-
+    it("ingresar bisontes", () => {
+        expect(toro.setClave("1234")).toEqual("%%");
+    });
   });
