@@ -13,17 +13,24 @@ inicioForm.addEventListener("submit", (event) => {
     document.getElementById("idiniciar").disabled=true;
   }else{
     window.alert(toro.setClave(codigo.value));
-  }i
+  }
 });
+
 intentarForm.addEventListener("submit", (event) => {
   event.preventDefault();
+  
+  var respuesta=toro.intentar(intento.value);
 
-  if(toro.intentar(intento.value)=="GANASTE"){
+  if(respuesta=="GANASTE"){
     document.getElementById("idintentar").disabled=true;
-    document.getElementById("idestado").innerHTML="<br>Respuesta: GANASTE 4 TOROS";
-  }else{
-    window.alert(toro.intentar(intento.value));
-  }i
+    document.getElementById("idestado").innerHTML="<br>Respuesta:"+respuesta;
+  }
+  if(respuesta.length>7){
+    window.alert(respuesta);
+  }
+  else{
+    document.getElementById("idestado").innerHTML="<br>Respuesta:"+respuesta;
+  }
 });
 
 

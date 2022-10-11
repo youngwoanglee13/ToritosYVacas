@@ -25,5 +25,8 @@ describe("INGRESAR CODIGO", () => {
     it("ingresar intento igual a la clave secreta", () => {
         expect(toro.intentar("1234")).toEqual("GANASTE");
     });
+    it("ingresar intento con toro", () => {
+        expect(toro.intentar("1554")).toEqual("!!");
+    });
 
   });

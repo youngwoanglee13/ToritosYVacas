@@ -23,9 +23,22 @@ class TorosYVacas{
         if(intento.length!=4){
             return "INGRESE INTENTO DE 4 DIGITOS"; 
         }
-        if(parseInt(intento)==this.clave){
+        if(intento==this.clave){
             return "GANASTE"
+        }else{
+            var clave=[this.clave[0],this.clave[1],this.clave[2],this.clave[3]];
+            var res = "";
+            for(var i=0;i<intento.length;i++){
+                    if(intento[i]==clave[i]){
+                        clave[i]="X";
+                        res="!"+res;
+                    }else{
+                        
+                    }
+            }
+            return res;
         }
+        
         return "ok";
     }
 }
