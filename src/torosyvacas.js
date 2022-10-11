@@ -1,5 +1,8 @@
 
 class TorosYVacas{
+    constructor(){
+        
+    }
     setClave(inclave) {
         if(inclave.length==0){
             return "NECESITA INGRESAR UNA CLAVE"; 
