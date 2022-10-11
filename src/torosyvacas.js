@@ -38,6 +38,10 @@ class TorosYVacas{
                                 clave[j]="X";
                                 res=res+"*";
                             }
+                            if(intento[i]==clave[j=i-1]||intento[i]==clave[j=i+1]){
+                                clave[j]="X";
+                                res=res+"#";
+                            }
                         }
                     }
             }
