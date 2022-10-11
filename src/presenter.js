@@ -1,1 +1,1 @@
-
+import setClave from "./TorosYVacas";
