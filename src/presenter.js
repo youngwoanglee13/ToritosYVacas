@@ -1,1 +1,1 @@
-import setClave from "./TorosYVacas";
+import setClave from "./TorosYVacas.js";
