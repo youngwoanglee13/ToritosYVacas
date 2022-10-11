@@ -1,4 +1,4 @@
-import TorosYVacas from "./TorosYVacas.js";
+import TorosYVacas from "./TorosYVacas";
 const toro = new TorosYVacas();
 const codigo =document.getElementById("idcodigo");
 const intento =document.getElementById("idintento");
