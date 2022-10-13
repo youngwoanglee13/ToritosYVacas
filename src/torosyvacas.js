@@ -3,7 +3,9 @@ class TorosYVacas{
         if(this.validar(inclave)!="ok"){
             return this.validar(inclave);
         }
+        var res="";
         this.clave=inclave;
+        return res;
     }
     validar(dato){
         if(dato.length==0){
@@ -31,12 +33,18 @@ class TorosYVacas{
                         clave[i]="X";
                         res="!"+res;
                     }else{
+                        if(intento[i]==parseInt(clave[i])+1 || intento[i]==parseInt(clave[i])-1){
+                            res+="#";
+                        }else{
                             for(var j=0;j<intento.length;j++){
                                 if(intento[i]==clave[j]){
                                     clave[j]="X";
                                     res=res+"*";
                                 }
                             }
+
+                        }    
+                        
                     }
             }
             return res;
@@ -46,4 +54,3 @@ class TorosYVacas{
     }
 }
 export default TorosYVacas;
-
