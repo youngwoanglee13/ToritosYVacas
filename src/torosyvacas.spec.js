@@ -32,19 +32,25 @@ describe("INGRESAR CODIGO", () => {
         expect(toro.intentar("5512")).toEqual("**");
     });
     it("ingresar intento con ternera", () => {
-        toro.setClave("1117")
+        toro.setClave("1117");
         expect(toro.intentar("5558")).toEqual("#");
     });
     it("ingresar intento con dos terneras superiores", () => {
-        toro.setClave("1177")
+        toro.setClave("1177");
         expect(toro.intentar("5588")).toEqual("##");
     });
     it("ingresar intento con dos terneras inferiores", () => {
-        toro.setClave("1177")
+        toro.setClave("1177");
         expect(toro.intentar("5566")).toEqual("##");
     });
     it("ingresar intento diferentes tipos de terneras", () => {
-        toro.setClave("1177")
+        toro.setClave("1177");
         expect(toro.intentar("5568")).toEqual("##");
+    });
+    it("ingresar intento bisonte", () => {
+        expect(toro.setClave("1113")).toEqual("%");
+    });
+    it("ingresar intento con multiples bisontes", () => {
+        expect(toro.setClave("1135")).toEqual("%%");
     });
   });

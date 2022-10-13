@@ -4,7 +4,13 @@ class TorosYVacas{
         if(this.validar(inclave)!="ok"){
             return this.validar(inclave);
         }
+        var bisontes="";
+        for(var i=0; i<inclave.length;i++){
+            if(inclave[i]=="2" || inclave[i]=="3" || inclave[i]=="5" ||inclave[i]=="9")
+            bisontes+="%";
+        }
         this.clave=inclave;
+        return bisontes;
     }
     validar(dato){
         if(dato.length==0){
