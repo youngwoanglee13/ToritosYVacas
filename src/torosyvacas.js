@@ -1,27 +1,25 @@
-
 class TorosYVacas{
     setClave(inclave) {
-        if(inclave.length==0){
-            return "NECESITA INGRESAR UNA CLAVE"; 
-        } 
-        if(isNaN(parseInt(inclave))){
-            return "INGRESE SOLO NUMEROS";  
-        }
-        if(inclave.length!=4){
-            return "INGRESE CLAVE DE 4 DIGITOS"; 
+        if(this.validar(inclave)!="ok"){
+            return this.validar(inclave);
         }
         this.clave=inclave;
-        return "ok";
     }
-    intentar(intento){
-        if(intento.length==0){
-            return "NECESITA INGRESAR UN INTENTO"; 
+    validar(dato){
+        if(dato.length==0){
+            return "NECESITA INGRESAR UN NUMERO"; 
         } 
-        if(isNaN(parseInt(intento))){
+        if(isNaN(parseInt(dato))){
             return "INGRESE SOLO NUMEROS";  
         }
-        if(intento.length!=4){
-            return "INGRESE INTENTO DE 4 DIGITOS"; 
+        if(dato.length!=4){
+            return "INGRESE UN NUMERO DE 4 DIGITOS"; 
+        }
+        return "ok";   
+    }
+    intentar(intento){
+        if(this.validar(intento)!="ok"){
+            return this.validar(intento);
         }
         if(intento==this.clave){
             return "GANASTE"
@@ -33,12 +31,12 @@ class TorosYVacas{
                         clave[i]="X";
                         res="!"+res;
                     }else{
-                        for(var j=0;j<intento.length;j++){
-                            if(intento[i]==clave[j]){
-                                clave[j]="X";
-                                res=res+"*";
+                            for(var j=0;j<intento.length;j++){
+                                if(intento[i]==clave[j]){
+                                    clave[j]="X";
+                                    res=res+"*";
+                                }
                             }
-                        }
                     }
             }
             return res;

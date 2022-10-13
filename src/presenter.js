@@ -7,10 +7,11 @@ const intentarForm = document.querySelector("#intentar-form");
 document.getElementById("idintentar").disabled=true;
 inicioForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  if(toro.setClave(codigo.value)=="ok"){
+  var clave=toro.setClave(codigo.value);
+  if(clave.length<=4){
     document.getElementById("idintentar").disabled=false;
     document.getElementById("idiniciar").disabled=true;
+    document.getElementById("idestado").innerHTML="<br>BISONTES:"+clave;
   }else{
     window.alert(toro.setClave(codigo.value));
   }
@@ -32,6 +33,3 @@ intentarForm.addEventListener("submit", (event) => {
     document.getElementById("idestado").innerHTML="<br>Respuesta:"+respuesta;
   }
 });
-
-
-
