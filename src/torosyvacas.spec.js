@@ -35,5 +35,8 @@ describe("INGRESAR CODIGO", () => {
         toro.setClave("1117")
         expect(toro.intentar("5558")).toEqual("#");
     });
-   
+    it("ingresar intento con dos ternera superiores", () => {
+        toro.setClave("1177")
+        expect(toro.intentar("5588")).toEqual("##");
+    });
   });

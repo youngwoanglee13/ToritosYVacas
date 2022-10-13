@@ -32,13 +32,17 @@ class TorosYVacas{
                         clave[i]="X";
                         res="!"+res;
                     }else{
-                            return "#";
+                        if(intento[i]==parseInt(clave[i])+1){
+                            res+="#";
+                        }else{
                             for(var j=0;j<intento.length;j++){
                                 if(intento[i]==clave[j]){
                                     clave[j]="X";
                                     res=res+"*";
                                 }
                             }
+
+                        }  
                     }
             }
             return res;
