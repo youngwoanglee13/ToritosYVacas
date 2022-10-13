@@ -32,6 +32,7 @@ class TorosYVacas{
                         clave[i]="X";
                         res="!"+res;
                     }else{
+                            return "#";
                             for(var j=0;j<intento.length;j++){
                                 if(intento[i]==clave[j]){
                                     clave[j]="X";
